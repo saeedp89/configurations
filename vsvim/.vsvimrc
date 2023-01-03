@@ -1,0 +1,62 @@
+let mapleader=" "
+set number
+set rnu
+set ignorecase
+set smartcase
+set hlsearch
+set incsearch
+set showcmd
+set expandtab
+
+
+
+inoremap jk <esc>
+nnoremap <c-l> :nohlsearch<CR>
+set clipboard=unnamed
+map gd :vsc ReSharper.ReSharper_GotoDeclaration<CR>
+map gi :vsc ReSharper.ReSharper_GotoImplementations<CR>
+map <leader>r :vsc ReSharper.ReSharper_Rename<CR>
+map <leader>f :vsc ReSharper.ReSharper_ReformatCode<CR>
+map <c-j> :vsc ReSharper.ReSharper_GotoNextErrorInSolution<CR>
+map <c-y> :vsc ReSharper.ReSharper_GotoPrevErrorInSolution<CR>
+map <leader>s :vsc ReSharper.ReSharper_SurroundWith<CR>
+map <leader>l :vsc ReSharper.ReSharper_LocateInSolutionOrAssemblyExplorer<CR>
+map <leader>u :vsc ReSharper.ReSharper_GotoUsages<CR>
+map <leader>d :vsc ReSharper.ReSharper_DuplicateText<CR>
+map <leader>, :vsc ReSharper.ReSharper_GotoText<CR>
+map <leader>v :vsc ReSharper.ReSharper_IntroVariable<CR>
+map <leader>m :vsc ReSharper.ReSharper_ExtractMethod<CR>
+map <leader>o :vsc ReSharper.ReSharper_Move<CR>
+map <leader>t :vsc ReSharper.ReSharper_GotoType<CR>
+" map <leader>tr :vsc ReSharper.ReSharper_UnitTestRunFromContext<CR>
+" map <leader>td :vsc ReSharper.ReSharper_UnitTestDebugContext<CR>
+" map <leader>ta :vsc ReSharper.ReSharper_UnitTestRunSolution<CR>
+" map <leader>tl :vsc ReSharper.ReSharper_UnitTestSessionRepeatPreviousRun<CR>
+" map <leader>tt :vsc ReSharper.ReSharper_ShowUnitTestSessions<CR>
+map <leader>/ :vsc ReSharper.ReSharper_LineComment<CR>
+map <leader>qk :vsc Tools.CustomizeKeyboard<CR>
+map <leader>b :vsc Build.BuildSolution<CR>
+map <leader><leader> :vsc Tools.InvokeAceJumpCommand<CR>
+map <Space>; A;<Esc>
+map ] :vsc ReSharper.ReSharper_GotoNextMember<CR>
+map [ :vsc ReSharper.ReSharper_GotoPrevMember<CR>
+map zl :so ~/.vsvimrc<CR>
+nnoremap n nzz
+nnoremap N Nzz
+set backspace=indent,eol,start
+
+map zm :vsc Edit.CollapsetoDefinitions<CR>
+nnoremap zO :vsc Edit.ExpandAllOutlining<CR>
+nnoremap <leader>e :vsc ReSharper.ReSharper_GotoRecentFiles<CR>
+nnoremap <leader>k :vsc ReSharper.ReSharper_InspectThis<CR>
+nnoremap crr :vsc ReSharper.ReSharper_RefactorThis<CR>
+
+nnoremap gwo :vsc FullScreen<CR>
+nnoremap J :m+1<CR>
+nnoremap K :m-2<CR>
+nnoremap Y y$
+nnoremap gr :vsc Edit.FindAllReferences<CR>
+
+xnoremap gc :vsc Edit.CommentSelection<CR>
+xnoremap <c-r><c-r> :vsc ReSharper.ReSharper_RefactorThis<CR>
+nnoremap <bs> :vsc ReSharper_AltEnter<CR>
