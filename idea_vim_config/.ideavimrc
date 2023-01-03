@@ -1,0 +1,79 @@
+"" Source your .vimrc
+"source ~/.vimrc
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+" Find more examples here: https://jb.gg/share-ideavimrc
+let mapleader=" "
+set ignorecase
+set smartcase
+set hlsearch
+set showmode
+set so=5
+set incsearch
+set number
+set rnu
+set noerrorbells
+
+
+set NERDTree
+set surround
+set ideajoin
+set ideastatusicon=gray
+set easymotion
+set commentary
+set ideajoin
+set exchange
+
+nnoremap Y y$
+inoremap jk <esc>
+
+map <leader>f <Action>(ReformatCode)
+map \d <Action>(Debug)
+map \b <Action>(ToggleLineBreakpoint)
+map \r <Action>(Run)
+map <leader>s <Action>(SelectInProjectView)
+
+map <S-Space> <Action>(GotoNextError)
+map <leader>e <Action>(RecentFiles)
+map \h <Action>(HideAllWindows)
+map \t <Action>(ActivateTerminalToolWindow)
+map <leader>F <Action>(GotoFile)
+
+map <C-J> <C-W>j
+map <C-K> <C-W>k
+map <C-L> <C-W>l
+map <C-H> <C-W>h
+
+vmap <leader>y "+y
+vmap <leader>d "+d
+nmap <leader>P "+P
+nmap <leader>\ :vsplit<CR>
+nmap <leader>- :hsplit<CR>
+nmap \u :action UnsplitAll<CR>
+map <leader>/ <Action>(CommentByLineComment)
+map <leader>? <Action>(CommentByBlockComment)
+map crr <Action>(Refactorings.QuickListPopupAction)
+nmap J :m+1<CR>
+nmap K :m-2<CR>
+map <S-c> <Action>(RiderCollapseToDefinitions)
+map \1 <Action>(ExpandAllToLevel1)
+map \2 <Action>(ExpandAllToLevel2)
+map \3 <Action>(ExpandAllToLevel3)
+map \4 <Action>(ExpandAllToLevel4)
+map \5 <Action>(ExpandAllToLevel5)
+map 't <Action>(IdeaVim.ReloadVimRc.reload)
+map <leader>u <Action>(FindUsages)
+nnoremap <s-l> :nohlsearch<CR>
+map gi <Action>(ReSharperGotoImplementation)
+map <leader>' <Action>(IntroduceVariable)
+map <leader>r <Action>(RenameElement)
+map <c-e>i <Action>(ExtractInterface)
+map <c-e>m <Action>(ExtractMethod)
+map <c-x> <Action>($Cut)
+map <c-e>c <Action>(RiderBackendAction-ExtractClass)
+
+map <leader>d <Action>(EditorDuplicate)
+map <leader>b <Action>(RebuildSolutionAction)
+map <space>; <Action>(StepOver)
