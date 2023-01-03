@@ -1,0 +1,28 @@
+let mapleader=" "
+set number
+set rnu
+set nuw=4
+set ignorecase
+set smartcase
+set hlsearch
+set incsearch
+set showcmd
+set expandtab
+filetype plugin indent on
+set numberwidth=4
+set ruler
+set laststatus=2
+set cmdheight=2
+set wildmenu
+set softtabstop=4
+set shiftwidth=4
+
+
+
+
+
+inoremap jk <esc>
+nnoremap <c-l> :nohlsearch<CR>
+nnoremap , viw
+nnoremap <leader>U viwU
+nnoremap <leader>u viwu
